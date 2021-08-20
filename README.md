@@ -5,7 +5,7 @@ PyTorch implementation of "Super SloMo: High Quality Estimation of Multiple Inte
 ## Preparing train/test/val data
 In the [restructure_dataset.py](restructure_dataset.py), set the parameters (rgb dataset path, train/test/val dataset path, number of frames, etc.) and run code. You will need to install `shutil` and `split-folders`.
 
-### Training
+## Training
 In the [train.ipynb](train.ipynb), set the parameters (dataset path, checkpoint directory, etc.) and run all the cells.
 
 ## Evaluation
