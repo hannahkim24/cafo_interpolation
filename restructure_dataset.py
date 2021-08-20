@@ -1,8 +1,10 @@
 """
 Code restructures original rgb cafo dataset to feed to interpolation pipeline.
 
-rgb_dir should be path to rgb cafo dataset, and num_files should equal number of frames
-each folder needs to have (current default is 12).
+rgb_dir = path to rgb cafo dataset
+num_files = number of frames each folder needs to have (current default is 12).
+dataset_dir = path to directory for train/test/val datasets
+train/test/validationPath = paths to corresponding datasets
 """
 
 import shutil
