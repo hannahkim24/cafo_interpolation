@@ -88,8 +88,8 @@ def split_train_test_val(rgb_dir, dataset_dir):
     trainIndices = [x for x in range((len(videos))) if x not in testIndices]
 
     # Move train and test videos
-    trainPath = '/content/drive/MyDrive/slomo/dataset/train'
-    testPath = '/content/drive/MyDrive/slomo/dataset/test'
+    trainPath = '/path/to/train/dataset'
+    testPath = '/path/to/test/dataset'
 
     for index in trainIndices:
         shutil.move(os.path.join(rgb_dir, str(index)), trainPath)
@@ -100,7 +100,8 @@ def split_train_test_val(rgb_dir, dataset_dir):
     # Select clips at random from test set for validation set.
     testClips = os.listdir(testPath)
     indices = random.sample(testClips, min(100, int(len(testClips) / 5)))
-    validationPath = '/content/drive/MyDrive/slomo/dataset/validation'
+    
+    validationPath = '/path/to/val/dataset'
     for index in indices:
         shutil.move(os.path.join(testPath, str(index)), validationPath)
 
