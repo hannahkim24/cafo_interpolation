@@ -19,6 +19,12 @@ python eval.py data/input.mp4 --checkpoint=data/SuperSloMo.ckpt --output=data/ou
 
 Use `python eval.py --help` for more details
 
+### Interpolated Frame Generator
+With image sets of three (frame_00.png, frame_01_gt.png, frame_02.png), you can use [interpolated_frame_generator.py](interpolated_frame_generator.py) to generate an interpolated intermediate frame. You will need to restructure your dataset using `restructure_eval_dataset.py`. You will also need to set the parameters (eval dataset path, checkpoint path, etc.) The batch size, scale, and fps are already specified to output a single interpolated frame. Then, run the code. 
+
+### Restructure Evaluation Dataset
+In the [restructure_eval_dataset.py](restructure_eval_dataset.py), set the perameters (evaluation dataset path) and run code. 
+
 
 ## References:
 Parts of the code is based on [Super-SloMo](https://github.com/avinashpaliwal/Super-SloMo)
