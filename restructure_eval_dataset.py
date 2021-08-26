@@ -1,3 +1,14 @@
+'''
+Restructures dataset into three frame sets: 
+"frame_00.png", "frame_01_gt.png", and "frame_02.png".
+
+Set parameters in main function.
+
+NOTE: The following code edits the actual dataset. 
+Please copy the dataset before you run this code if
+you would like to keep the original structure. 
+'''
+
 import shutil
 import os
 
@@ -57,7 +68,7 @@ def rename_files(main_dir):
 def main():
     """After moving 2018 to loc_2018"""
 
-    src_dir = '/Users/hannahkim/Desktop/slomo/test_dataset'
+    src_dir = '/path/to/dataset'
 
     for filename in sorted(os.listdir(src_dir)):
         if not ('DS_Store') in filename:
