@@ -97,6 +97,7 @@ def split_train_test_val(rgb_dir, dataset_dir):
     # Move train and test videos
     trainPath = '/path/to/train/dataset'
     testPath = '/path/to/test/dataset'
+    validationPath = '/path/to/val/dataset'
 
     for index in trainIndices:
         shutil.move(os.path.join(rgb_dir, str(index)), trainPath)
@@ -108,7 +109,6 @@ def split_train_test_val(rgb_dir, dataset_dir):
     testClips = os.listdir(testPath)
     indices = random.sample(testClips, min(100, int(len(testClips) / 5)))
     
-    validationPath = '/path/to/val/dataset'
     for index in indices:
         shutil.move(os.path.join(testPath, str(index)), validationPath)
 
